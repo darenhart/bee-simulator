@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>ants</title>
+		<style>
+			form {
+				width: 250px;
+			}
+			input {
+				float: right;
+			}
+			
+			canvas {
+				position: absolute;
+				top: 40px;
+				left: 300px;
+				background: transparent;
+			}
+			#background {
+				z-index: -4;
+			}
+			#ninho {
+				z-index: -3;
+			}
+			#ninho {
+				z-index: -2;
+			}
+			#foods {
+				z-index: -1;
+			}
+			#ants {
+				z-index: 0;
+			}
+			#texts {
+				z-index: 1;
+			}
+		</style>
+	</head>
+	<script src="jquery.js" type="text/javascript"></script>
+	<body>
+
+		<!-- The canvas for the panning background -->
+		<canvas id="background">
+			Your browser does not support canvas. Please try again with a different browser.
+		</canvas>
+		<canvas id="ninho"></canvas>
+		<canvas id="jail"></canvas>
+		<canvas id="foods"></canvas>
+		<canvas id="ants"></canvas>
+		<canvas id="texts"></canvas>
+
+		<form id="inputs">
+			<p><a id="newAnt" href="#">Aperte espaço para criar moscas</a></p>
+			<p><a id="newFood" href="#">Clique para criar comidas</a></p>
+			<hr>
+			<h4>
+				Moscas
+				<button id="restartAnt" type="button" >limpar moscas</button>
+			</h4>
+			<p>
+				<label>Velocidade</label>
+				<input id="speed" size="3" value="1.2">
+			</p>
+			<p>
+				<label>Aleatorieade da direção</label>
+				<input id="angleRandom" size="3" value="10">
+			</p>
+			<p>
+				<label>Aleatorieade da velocidade</label>
+				<input id="speedRandom" size="3" value="0">
+			</p>
+			<hr>
+			<h4>
+				Comida
+				<button id="restartFood" type="button" >limpar comidas</button>
+			</h4>
+			<p>
+				<label>Atração por comida</label>
+				<input id="foodAttract" size="3" value="68">
+			</p>
+			<p>
+				<label>Atração massa/distacnia²</label>
+				<input id="gravitacional" type="checkbox">
+			</p>
+			<p>
+				<label>Distancia do olfato da mosca</label>
+				<input id="distanceFoodAttract" size="3" value="100">
+			</p>
+			<hr>
+			<h4>Outros</h4>
+			<p>
+				<label>Parede espelho</label>
+				<input id="mirror" type="checkbox" >
+			</p>
+			<input id="restart" type="button" value="start">
+		</form>
+		<script src="Drawable.js"></script>
+		<script src="Keys.js"></script>
+		<script src="Text.js"></script>
+		<script src="Ninho.js"></script>
+		<script src="Jail.js"></script>
+		<script src="Ant.js"></script>
+		<script src="Food.js"></script>
+		<script src="Game.js"></script>
+	</body>
+</html>
