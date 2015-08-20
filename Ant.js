@@ -76,6 +76,7 @@ function Ant() {
 		this.speedRandom = parseFloat($('#speedRandom').val());
 		this.foodAttract = parseFloat($('#foodAttract').val());
 		this.distanceFoodAttract = parseFloat($('#distanceFoodAttract').val());
+		this.distanceFoodEat = 0;
 	};
 	/*
 	 * Uses a "drity rectangle" to erase the ant and moves it.
@@ -130,7 +131,7 @@ function Ant() {
 					this.angle -= this.attractA;
 				}
 
-				if (distance.hypo < 2) {
+				if (distance.hypo < this.distanceFoodEat) {
 					gotFood = true;
 					game.foods.found(i);
 					break;

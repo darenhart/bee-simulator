@@ -85,7 +85,7 @@ function Game() {
 			
 			this.background = new Background();
 			this.ninho = new Ninho();
-			this.jail = new Jail();
+			//this.jail = new Jail();
 			this.anthill = new Anthill();
 			this.foods = new Foods();
 			this.texts = new Text();
@@ -123,7 +123,7 @@ function animate() {
 	game.anthill.listen();
 	game.anthill.antPool.animate();
 	game.foods.listen();
-	game.jail.checkAnts();
+	//game.jail.checkAnts();
 	game.texts.fpsUpdate();
 }
 
@@ -151,7 +151,7 @@ function init() {
 	if(game.init()) {
 		game.background.draw();
 		game.ninho.draw();
-		game.jail.draw();
+		//game.jail.draw();
 		game.retrieveInputs();
 		game.start();
 	}

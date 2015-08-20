@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>ants</title>
+		<title>Bee Simulator</title>
 		<style>
 			form {
 				width: 250px;
@@ -15,6 +15,9 @@
 				top: 40px;
 				left: 300px;
 				background: transparent;
+			}
+			label, button, input, h4, h3, a {
+				font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
 			}
 			#background {
 				z-index: -4;
@@ -50,49 +53,50 @@
 		<canvas id="texts"></canvas>
 
 		<form id="inputs">
-			<p><a id="newAnt" href="#">Aperte espaço para criar moscas</a></p>
-			<p><a id="newFood" href="#">Clique para criar comidas</a></p>
+			<h3>Bee Simulator - <a href="https://github.com/darenhart/bee-simulator">github</a></h3>
+			<p><a id="newAnt" href="#">Space to create bee</a></p>
+			<p><a id="newFood" href="#">Click to create food</a></p>
 			<hr>
 			<h4>
-				Moscas
-				<button id="restartAnt" type="button" >limpar moscas</button>
+				Bee
+				<button id="restartAnt" type="button" >Clear</button>
 			</h4>
 			<p>
-				<label>Velocidade</label>
+				<label>Speed</label>
 				<input id="speed" size="3" value="1.2">
 			</p>
 			<p>
-				<label>Aleatorieade da direção</label>
+				<label>Direction Randomness</label>
 				<input id="angleRandom" size="3" value="10">
 			</p>
 			<p>
-				<label>Aleatorieade da velocidade</label>
+				<label>Speed Randomness</label>
 				<input id="speedRandom" size="3" value="0">
 			</p>
 			<hr>
 			<h4>
-				Comida
-				<button id="restartFood" type="button" >limpar comidas</button>
+				Food
+				<button id="restartFood" type="button" >Clear</button>
 			</h4>
 			<p>
-				<label>Atração por comida</label>
+				<label>Attraction</label>
 				<input id="foodAttract" size="3" value="68">
 			</p>
 			<p>
-				<label>Atração massa/distacnia²</label>
+				<label>attract/distance²</label>
 				<input id="gravitacional" type="checkbox">
 			</p>
 			<p>
-				<label>Distancia do olfato da mosca</label>
+				<label>Smell distance</label>
 				<input id="distanceFoodAttract" size="3" value="100">
 			</p>
 			<hr>
-			<h4>Outros</h4>
+			<h4>Other</h4>
 			<p>
-				<label>Parede espelho</label>
+				<label>Mirror</label>
 				<input id="mirror" type="checkbox" >
 			</p>
-			<input id="restart" type="button" value="start">
+			<input id="restart" type="button" value="restart">
 		</form>
 		<script src="Drawable.js"></script>
 		<script src="Keys.js"></script>
