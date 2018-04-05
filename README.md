@@ -2,6 +2,6 @@
 
 This is a bee simulator created with canvas
 
-Run index.html
+Demo: https://darenhart.github.io/bee-simulator/
 
 Get a better experience with Chrome Browser.
