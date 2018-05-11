@@ -1,5 +1,9 @@
 # Bee Simulator
 
-Run index.html
+This is a bee simulator created with canvas
 
-Demo: https://dl.dropboxusercontent.com/u/4045392/prog/canvas/bee/index.html
+Demo: https://darenhart.github.io/bee-simulator/
+
+Get a better experience with Chrome Browser.
+
+June/2015
